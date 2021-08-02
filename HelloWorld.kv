@@ -1,0 +1,35 @@
+#:import ku kivy.utils
+
+<Tela1@FloatLayout>:
+    canvas:
+        Color:
+            rgba: 1,1,1,1
+
+        Rectangle:
+            size:self.size
+            pos:self.pos
+            source:"images/Kiwi.jpg"
+
+    Label:
+        id: label_color
+        text: "Programa em KV"
+        size_hint_y: 1.8
+#        height: 1280
+#        color: 0.9607843137254902, 0.45098039215686275, 0.8, 1.0
+        color: ku.get_color_from_hex("#f05deb")  # Rodar cores em Hexadecimal
+#        background_normal: ""
+        font_size: 40
+
+    TextInput:
+        id: text_input
+        size_hint: (.35, .195)
+        pos_hint: {"x": .34,"y": .6}
+
+    Button:
+        text: "Imprimir"
+        size_hint: (.20, .09)
+        pos_hint: {"x": .415,"y": .45}
+        on_press: root.imprimir()
+
+
+
